@@ -1,6 +1,6 @@
 @import '../../assets/styles/_variables.sass'
 
-.container
+.container__mobile
   width: 100vw
   height: 100vh
   background-image: linear-gradient($gradient-angle, $gradient-colors)
@@ -9,46 +9,51 @@
   justify-content: center
 
   &__box
-    width: 70%
+    width: 85%
     height: 60%
     background-color: $light-grayish-blue
     display: flex
+    flex-direction: column
     align-items: center
     border-radius: 20px
     z-index: 5
 
     &__images
       display: flex
-      width: 45%
-      height: 100%
+      width: 100%
+      height: 30%
       position: relative
       z-index: 0
-      overflow: hidden
       align-items: center
+      justify-content: center
 
       &_background
         z-index: 1
         position: absolute
         height: 100%
-        left: -10rem
+        width: 70%
+        top: -3rem
 
       &_banner
         z-index: 2
         position: absolute
-        top: 15%
-        left: -5rem
+        width: 80%
+        top: -6rem
 
       &_box
         z-index: 3
         position: fixed
-        top: 43%
-        left: 12.2rem
+        top: 16%
+        right: 14rem
+        width: 25%
 
     &__faq
       display: flex
-      width: 50%
-      height: 75%
+      width: 100%
+      height: 80%
       flex-direction: column
+      justify-content: center
+      align-items: center
       gap: 2rem
 
       &_title
@@ -60,11 +65,13 @@
         display: flex
         flex-direction: column
         gap: 3rem
+        width: 100%
         height: 100%
 
         &_div
-          width: calc(80% - 25px)
-          padding-right: 25px
+          width: calc(100% - 4rem)
+          margin: 0 2rem
+          padding: 0 1rem
           display: flex
           justify-content: space-between
           border-style: solid
@@ -76,7 +83,7 @@
 
           &_title
             font-family: $font
-            font-size: 16px
+            font-size: 12px
             color: $very-dark-desaturated-blue
             font-weight: $text-weight
 

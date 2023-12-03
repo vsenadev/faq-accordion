@@ -5,23 +5,12 @@ import Banner from '../../assets/img/illustration-woman-online-desktop.svg';
 import { ReactComponent as ArrowDown } from '../../assets/img/icon-arrow-down.svg';
 import data from '../../data/options.json';
 import {useState} from "react";
-
-interface DescriptionData {
-    [key: string]: string;
-}
+import {changeOpen} from "../../utils/ChangeOpen";
+import {IDescriptionData} from "../../interface/IDescriptionData";
 
 export default function Home(){
     const [open, setOpen] = useState('')
-
-    const json: { description: DescriptionData } = data;
-
-    function changeOpen(title: string){
-        if(title === open){
-            setOpen('')
-        }else{
-            setOpen(title)
-        }
-    }
+    const json: { description: IDescriptionData } = data;
 
     return(
         <section className={styles.container}>
@@ -38,10 +27,10 @@ export default function Home(){
                             data.title.map((element: string) => (
                                 <div key={element}>
                                     <div className={styles.container__box__faq_options_div}>
-                                        <span style={open === element ? {fontWeight: 700} : {}} className={styles.container__box__faq_options_div_title} onClick={() => changeOpen(element)}>{element}</span>
+                                        <span style={open === element ? {fontWeight: 700} : {}} className={styles.container__box__faq_options_div_title} onClick={() => changeOpen(element, open, setOpen)}>{element}</span>
                                         <ArrowDown
                                             className={open === element ? `${styles.rotateArrow} ${styles.arrowIcon}` : styles.arrowIcon}
-                                            onClick={() => changeOpen(element)}
+                                            onClick={() => changeOpen(element, open, setOpen)}
                                         />                                        {
                                             element === open ?
                                                 <div className={styles.container__box__faq_options_div_text}>
