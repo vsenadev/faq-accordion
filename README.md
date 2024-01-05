@@ -3,6 +3,9 @@
 ## Descrição
 O FAQ Accordion é uma aplicação desenvolvida em React, TypeScript (TS) e Sass para fornecer uma experiência amigável na exibição de perguntas frequentes (FAQ). A aplicação utiliza um estilo de acordeão, permitindo aos usuários expandir ou recolher respostas para perguntas específicas de forma intuitiva.
 
+## Aplicação em produção
+https://faq-accordion-vsena21.vercel.app/
+
 ## Tecnologias Utilizadas
 [![My Skills](https://skillicons.dev/icons?i=react,ts,sass)](https://skillicons.dev)
 
